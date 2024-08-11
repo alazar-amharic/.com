@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #007BFF; /* Blue background */
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0056b3;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        h2 {
+            color: #fff;
+            text-align: center;
+        }
+
+        .enterpreneurship-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+
+        .enterpreneurship-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Calculator Styles */
+        .calculator {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .calculator input {
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: right;
+            border: none;
+            border-radius: 5px;
+            background: #fff;
+            color: #000;
+            padding: 15px;
+            font-size: 1.5em;
+        }
+
+        .calculator button {
+            width: 23%;
+            margin: 5px 1%;
+            background: #444;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .calculator button:hover {
+            background: #555;
+        }
+
+        .calculator button.operator {
+            background: #f0ad4e;
+        }
+
+        .calculator button.operator:hover {
+            background: #ec971f;
+        }
+
+        .calculator button.double {
+            width: 48%;
+        }
+
+        /* To-Do List Styles */
+        .todo-list {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        .todo-list input[type="text"] {
+            width: calc(100% - 60px);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .todo-list button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #28a745;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .todo-list button:hover {
+            background: #218838;
+        }
+
+        .todo-item {
+            background: #444;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .todo-item button {
+            background: #d9534f;
+        }
+
+        .todo-item button:hover {
+            background: #c9302c;
+        }
+
+        /* Rock-Paper-Scissors Styles */
+        .rps-game {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        .rps-buttons button {
+            background: #444;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+
+        .rps-buttons button:hover {
+            background: #555;
+        }
+
+        .rps-buttons button.selected {
+            background: #28a745;
+        }
+
+        .rps-result {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .rps-result .win {
+            color: #28a745;
+        }
+
+        .rps-result .lose {
+            color: #d9534f;
+        }
+
+        /* Arrange Sections */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .container > div {
+            flex: 1 1 300px;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Entrepreneurship Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#learn">Learn</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to the Entrepreneurship Guide</h2>
+        <p>Start your journey to becoming an entrepreneur today!</p>
+        <a href="entrepreneurship.html" class="enterpreneurship-btn">Entrepreneurship</a>
+    </section>
+
+    <div class="container">
+        <div id="learn">
+            <h2>Learn About Entrepreneurship</h2>
+            <p>Explore key concepts and strategies that are essential for starting your own business.</p>
+            <button onclick="showQuiz()">Take a Quiz!</button>
+            <div id="quiz" class="hidden">
+                <h3>Entrepreneurship Quiz</h3>
+                <p>Question 1: What is the first step in starting a business?</p>
+                <ul>
+                    <li><button onclick="showResult('A')">Identify a market need</button></li>
+                    <li><button onclick="showResult('B')">Create a business plan</button></li>
+                    <li><button onclick="showResult('C')">Secure funding</button></li>
+                </ul>
+                <div id="quizResult" class="quiz-result hidden"></div>
+            </div>
+        </div>
+
+        <div id="calculator">
+            <h2>Professional Calculator</h2>
+            <div class="calculator">
+                <input type="text" id="calcDisplay" disabled>
+                <div>
+                    <button onclick="appendNumber('7')">7</button>
+                    <button onclick="appendNumber('8')">8</button>
+                    <button onclick="appendNumber('9')">9</button>
+                    <button class="operator" onclick="setOperation('/')">/</button>
+                </div>
+                <div>
+                    <button onclick="appendNumber('4')">4</button>
+                    <button onclick="appendNumber('5')">5</button>
+                    <button onclick="appendNumber('6')">6</button>
+                    <button class="operator" onclick="setOperation('*')">*</button>
+                </div>
+                <div>
+                    <button onclick="appendNumber('1')">1</button>
+                    <button onclick="appendNumber('2')">2</button>
+                    <button onclick="appendNumber('3')">3</button>
+                    <button class="operator" onclick="setOperation('-')">-</button>
+                </div>
+                <div>
+                    <button onclick="appendNumber('0')">0</button>
+                    <button onclick="appendNumber('.')">.</button>
+                    <button class="double" onclick="calculateResult()">=</button>
+                    <button class="operator" onclick="setOperation('+')">+</button>
+                </div>
+                <button onclick="clearDisplay()">C</button>
+            </div>
+        </div>
+
+        <div id="todo">
+            <h2>To-Do List</h2>
+            <div class="todo-list">
+                <input type="text" id="todoInput" placeholder="Add a new task">
+                <button onclick="addTodo()">Add Task</button>
+                <ul id="todoList"></ul>
+            </div>
+        </div>
+
+        <div id="rps">
+            <h2>Rock-Paper-Scissors</h2>
+            <div class="rps-game">
+                <div class="rps-buttons">
+                    <button onclick="playRPS('rock')                    ">Rock</button>
+                    <button onclick="playRPS('paper')">Paper</button>
+                    <button onclick="playRPS('scissors')">Scissors</button>
+                </div>
+                <div id="rpsResult" class="rps-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Calculator Logic
+        let currentOperation = '';
+        let currentNumber = '';
+        let previousNumber = '';
+
+        function appendNumber(number) {
+            currentNumber += number;
+            updateDisplay();
+        }
+
+        function setOperation(operation) {
+            if (currentNumber === '') return;
+            if (previousNumber !== '') {
+                calculateResult();
+            }
+            currentOperation = operation;
+            previousNumber = currentNumber;
+            currentNumber = '';
+        }
+
+        function calculateResult() {
+            let result;
+            const prev = parseFloat(previousNumber);
+            const current = parseFloat(currentNumber);
+            if (isNaN(prev) || isNaN(current)) return;
+
+            switch (currentOperation) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+            currentNumber = result;
+            currentOperation = '';
+            previousNumber = '';
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.getElementById('calcDisplay').value = currentNumber;
+        }
+
+        function clearDisplay() {
+            currentNumber = '';
+            previousNumber = '';
+            currentOperation = '';
+            updateDisplay();
+        }
+
+        // To-Do List Logic
+        function addTodo() {
+            const todoText = document.getElementById('todoInput').value;
+            if (todoText === '') return;
+            const todoList = document.getElementById('todoList');
+
+            const todoItem = document.createElement('li');
+            todoItem.classList.add('todo-item');
+            todoItem.innerHTML = `${todoText} <button onclick="removeTodoItem(this)">Remove</button>`;
+
+            todoList.appendChild(todoItem);
+            document.getElementById('todoInput').value = '';
+        }
+
+        function removeTodoItem(button) {
+            const todoItem = button.parentElement;
+            todoItem.remove();
+        }
+
+        // Rock-Paper-Scissors Logic
+        function playRPS(playerChoice) {
+            const choices = ['rock', 'paper', 'scissors'];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+            let result = '';
+            if (playerChoice === computerChoice) {
+                result = 'It\'s a draw!';
+            } else if (
+                (playerChoice === 'rock' && computerChoice === 'scissors') ||
+                (playerChoice === 'paper' && computerChoice === 'rock') ||
+                (playerChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                result = 'You win!';
+            } else {
+                result = 'You lose!';
+            }
+
+            document.getElementById('rpsResult').innerText = `Computer chose ${computerChoice}. ${result}`;
+        }
+
+        // Quiz Logic
+        function showQuiz() {
+            document.getElementById('quiz').classList.toggle('hidden');
+        }
+
+        function showResult(answer) {
+            let resultText = '';
+            if (answer === 'A') {
+                resultText = 'Correct! Identifying a market need is the first step.';
+            } else {
+                resultText = 'Incorrect. Try again!';
+            }
+            document.getElementById('quizResult').innerText = resultText;
+            document.getElementById('quizResult').classList.remove('hidden');
+        }
+    </script>
+</body>
+
+</html>
